@@ -652,11 +652,11 @@
 				const checkboxes = document.querySelectorAll('#modalAcompanhamentos input[type="checkbox"]:checked');
 				
 				// Verificar se selecionou mais de 3 acompanhamentos
-				if (checkboxes.length > 3) {
+				if (checkboxes.length > 10) {
 					Swal.fire({
 						icon: 'error',
 						title: 'Ops...',
-						text: 'Você pode selecionar no máximo 3 acompanhamentos!'
+						text: 'Você pode selecionar no máximo 10 acompanhamentos!'
 					});
 					return;
 				}
