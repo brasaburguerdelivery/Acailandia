@@ -1235,115 +1235,31 @@
 			// Variável global para armazenar o produto selecionado
 let produtoSelecionadoGlobal = '';
 
-// Função para abrir o modal de acompanhamentos
+// Abre o modal de acompanhamentos (fachada)
 function abrirModalAcompanhamentos(produtoId) {
     produtoSelecionadoGlobal = produtoId;
     document.getElementById('modalOverlay').style.display = 'block';
     document.getElementById('modalAcompanhamentos').style.display = 'block';
-    document.getElementById('modalButtonsContainer').style.display = 'block';
 }
 
-function fecharModalAcompanhamentos() {
+// Fecha o modal e redireciona
+function confirmarAcompanhamentos() {
     document.getElementById('modalOverlay').style.display = 'none';
     document.getElementById('modalAcompanhamentos').style.display = 'none';
-    document.getElementById('modalButtonsContainer').style.display = 'none';
-    produtoSelecionadoGlobal = '';
     
-    // Desmarcar todos os checkboxes
-    const checkboxes = document.querySelectorAll('#modalAcompanhamentos input[type="checkbox"]');
-    checkboxes.forEach(checkbox => {
-        checkbox.checked = false;
-    });
-}
-
-// Função para confirmar os acompanhamentos e abrir modal de endereço
-function confirmarAcompanhamentos() {
-    const checkboxes = document.querySelectorAll('#modalAcompanhamentos input[type="checkbox"]:checked');
-    
-    // Verificar se selecionou mais de 10 acompanhamentos
-    if (checkboxes.length > 10) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Ops...',
-            text: 'Você pode selecionar no máximo 10 acompanhamentos!'
-        });
-        return;
-    }
-    
-    // Verificar se um produto foi selecionado
-    if (!produtoSelecionadoGlobal || !produtos[produtoSelecionadoGlobal]) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Erro',
-            text: 'Produto não encontrado!'
-        });
-        return;
-    }
-    
-    // Fechar modal de acompanhamentos e abrir modal de endereço
-    fecharModalAcompanhamentos();
-    abrirModalEndereco();
-}
-
-// Funções para o modal de endereço
-function abrirModalEndereco() {
-    document.getElementById('modalOverlay').style.display = 'block';
+    // Abre o modal de endereço (fachada)
     document.getElementById('modalEndereco').style.display = 'block';
 }
 
-function fecharModalEndereco() {
-    document.getElementById('modalOverlay').style.display = 'none';
-    document.getElementById('modalEndereco').style.display = 'none';
-}
-
-function voltarParaAcompanhamentos() {
-    fecharModalEndereco();
-    abrirModalAcompanhamentos(produtoSelecionadoGlobal);
-}
-
+// Finaliza o pedido (ignora dados do endereço)
 function finalizarPedido() {
-    const endereco = document.getElementById('endereco').value;
-    const bairro = document.getElementById('bairro').value;
-    const numero = document.getElementById('numero').value;
-    
-    // Validação básica
-    if (!endereco || !bairro || !numero) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Campos obrigatórios',
-            text: 'Por favor, preencha pelo menos Endereço, Bairro e Número'
-        });
-        return;
-    }
-    
-    // Verificar se o produto existe no mapeamento
     if (!produtoSelecionadoGlobal || !produtos[produtoSelecionadoGlobal]) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Erro',
-            text: 'Produto não encontrado ou seleção inválida!'
-        });
+        alert('Produto não encontrado!');
         return;
     }
     
-    // Mostrar loading
-    Swal.fire({
-        title: 'Processando seu pedido...',
-        allowOutsideClick: false,
-        didOpen: () => {
-            Swal.showLoading();
-            
-            // Simular processamento (remova em produção)
-            setTimeout(() => {
-                // Fechar modais
-                fecharModalEndereco();
-                document.getElementById('modalOverlay').style.display = 'none';
-                
-                // Redirecionar para o link de pagamento
-                window.location.href = produtos[produtoSelecionadoGlobal].link;
-            }, 1500);
-        }
-    });
+    // Redireciona para o link do produto
+    window.location.href = produtos[produtoSelecionadoGlobal].link;
 }
 
 
