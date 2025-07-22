@@ -340,25 +340,23 @@
         }
 
 			.modal-buttons-rectangle {
-			display: flex;
-			gap: 2px;
-			margin-top: 2px;
-			
-		}
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
 
 		.modal-buttons-rectangle .btn {
 			padding: 10px 20px;
 			border: none;
-			border-radius: 20px; /* Bordas mais arredondadas */
+			border-radius: 20px; /* Bordas arredondadas no estilo "pill" */
 			cursor: pointer;
-			font-weight: 500; /* Peso de fonte mais leve */
-			font-size: 14px; /* Tamanho de fonte menor */
+			font-weight: 500;
+			font-size: 14px;
 			flex: 1;
 			transition: all 0.2s ease;
 			box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-			text-transform: none; /* Removido uppercase */
-			letter-spacing: normal;
-			min-height: 40px; /* Altura consistente */
+			min-height: 40px;
 		}
 
 		.modal-buttons-rectangle .btn-cancelar {
