@@ -1316,22 +1316,36 @@ function finalizarPedido() {
         return;
     }
     
-    // Mostrar loading e redirecionar para o checkout
+    // Verificar se o produto existe no mapeamento
+    if (!produtoSelecionadoGlobal || !produtos[produtoSelecionadoGlobal]) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Erro',
+            text: 'Produto não encontrado ou seleção inválida!'
+        });
+        return;
+    }
+    
+    // Mostrar loading
     Swal.fire({
         title: 'Processando seu pedido...',
         allowOutsideClick: false,
         didOpen: () => {
             Swal.showLoading();
             
-            // Aqui você pode adicionar lógica para salvar o endereço se necessário
-            
-            // Redirecionar para o pagamento após 1 segundo
+            // Simular processamento (remova em produção)
             setTimeout(() => {
+                // Fechar modais
+                fecharModalEndereco();
+                document.getElementById('modalOverlay').style.display = 'none';
+                
+                // Redirecionar para o link de pagamento
                 window.location.href = produtos[produtoSelecionadoGlobal].link;
-            }, 1000);
+            }, 1500);
         }
     });
 }
+
 
 
 // Mapeamento dos produtos e seus links de pagamento
