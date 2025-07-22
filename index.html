@@ -14,6 +14,69 @@
     <style type="text/css">
 
 		
+		/* Estilos para o modal de endereço */
+		#modalEndereco {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 90%;
+			max-width: 500px;
+			background: white;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 20px rgba(0,0,0,0.2);
+			z-index: 1002;
+			max-height: 80vh;
+			overflow-y: auto;
+		}
+
+		.form-group {
+			margin-bottom: 15px;
+		}
+
+		.form-group label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: bold;
+			color: #5b0e5c;
+		}
+
+		.form-group input {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			box-sizing: border-box;
+		}
+
+		.modal-buttons-endereco {
+			margin-top: 20px;
+			display: flex;
+			justify-content: space-between;
+			gap: 10px;
+		}
+
+		.modal-buttons-endereco .btn {
+			padding: 12px 20px;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			font-weight: bold;
+			flex: 1;
+		}
+
+		.modal-buttons-endereco .btn-voltar {
+			background: #f1f1f1;
+			color: #333;
+		}
+
+		.modal-buttons-endereco .btn-finalizar {
+			background: #5b0e5c;
+			color: white;
+		}
+
+
         h1,
         h2 {
             color: #5b0e5c;
@@ -1013,6 +1076,42 @@
 				</div>
 			</div>
 
+<!-- Modal de Endereço -->
+<div id="modalEndereco" style="display: none;">
+    <button onclick="fecharModalEndereco()" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 20px; cursor: pointer;">×</button>
+    <h3>Informe seu endereço de entrega</h3>
+    
+    <div class="form-group">
+        <label for="endereco">Endereço (Rua/Av.)</label>
+        <input type="text" id="endereco" placeholder="Ex: Rua das Flores">
+    </div>
+    
+    <div class="form-group">
+        <label for="bairro">Bairro</label>
+        <input type="text" id="bairro" placeholder="Ex: Centro">
+    </div>
+    
+    <div class="form-group">
+        <label for="numero">Número</label>
+        <input type="text" id="numero" placeholder="Ex: 123">
+    </div>
+    
+    <div class="form-group">
+        <label for="complemento">Complemento (Opcional)</label>
+        <input type="text" id="complemento" placeholder="Ex: Apt 101">
+    </div>
+    
+    <div class="form-group">
+        <label for="referencia">Ponto de referência (Opcional)</label>
+        <input type="text" id="referencia" placeholder="Ex: Próximo ao mercado">
+    </div>
+    
+    <div class="modal-buttons-endereco">
+        <button class="btn btn-voltar" onclick="voltarParaAcompanhamentos()">Voltar</button>
+        <button class="btn btn-finalizar" onclick="finalizarPedido()">Confirmar Endereço</button>
+    </div>
+</div>
+
 <!-- Modal de Acompanhamentos -->
 <div id="modalOverlay"></div>
 <div id="modalAcompanhamentos" style="display: none;">
@@ -1157,7 +1256,7 @@ function fecharModalAcompanhamentos() {
     });
 }
 
-// Função para confirmar os acompanhamentos e redirecionar para o pagamento
+// Função para confirmar os acompanhamentos e abrir modal de endereço
 function confirmarAcompanhamentos() {
     const checkboxes = document.querySelectorAll('#modalAcompanhamentos input[type="checkbox"]:checked');
     
@@ -1181,9 +1280,59 @@ function confirmarAcompanhamentos() {
         return;
     }
     
-    // Redirecionar para o link de pagamento
-    window.location.href = produtos[produtoSelecionadoGlobal].link;
+    // Fechar modal de acompanhamentos e abrir modal de endereço
+    fecharModalAcompanhamentos();
+    abrirModalEndereco();
 }
+
+// Funções para o modal de endereço
+function abrirModalEndereco() {
+    document.getElementById('modalOverlay').style.display = 'block';
+    document.getElementById('modalEndereco').style.display = 'block';
+}
+
+function fecharModalEndereco() {
+    document.getElementById('modalOverlay').style.display = 'none';
+    document.getElementById('modalEndereco').style.display = 'none';
+}
+
+function voltarParaAcompanhamentos() {
+    fecharModalEndereco();
+    abrirModalAcompanhamentos(produtoSelecionadoGlobal);
+}
+
+function finalizarPedido() {
+    const endereco = document.getElementById('endereco').value;
+    const bairro = document.getElementById('bairro').value;
+    const numero = document.getElementById('numero').value;
+    
+    // Validação básica
+    if (!endereco || !bairro || !numero) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Campos obrigatórios',
+            text: 'Por favor, preencha pelo menos Endereço, Bairro e Número'
+        });
+        return;
+    }
+    
+    // Mostrar loading e redirecionar para o checkout
+    Swal.fire({
+        title: 'Processando seu pedido...',
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+            
+            // Aqui você pode adicionar lógica para salvar o endereço se necessário
+            
+            // Redirecionar para o pagamento após 1 segundo
+            setTimeout(() => {
+                window.location.href = produtos[produtoSelecionadoGlobal].link;
+            }, 1000);
+        }
+    });
+}
+
 
 // Mapeamento dos produtos e seus links de pagamento
 const produtos = {
