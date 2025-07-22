@@ -1,55 +1,53 @@
-<!DOCTYPE html> 
-<html lang="pt-br" translate="no"><head><meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<!DOCTYPE html><html lang="pt-br" translate="no"><head><meta http-equiv="content-type" content="text/html;charset=UTF-8">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-    
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" data-utmify-ignore-iframe="" data-utmify-replace-link="pay.acaidelidelivery" async="" defer=""></script>
 	
 	<meta name="google" content="notranslate">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" type="image/jpg" href="images/logo1.png">
-	<title>Açaílandia - Delivery  - Faça seu pedido!</title>
-	<meta name="description" content="Faça seu pedido online no Açaílandia - Delivery . Acesse e peça agora pelo delivery food!">
+	<link rel="shortcut icon" type="image/jpg" href="images/logo.png">
+	<title>Açaílandia - Faça seu pedido!</title>
+	<meta name="description" content="Faça seu pedido online na Açaí Delli Delivery. Acesse e peça agora pelo delivery food!">
 	<link type="text/css" href="css/delivry.css" rel="stylesheet">
 	<style type="text/css">
 		h1,
 		h2 {
-			color: #46295a;
+			color: #5b0e5c;
 		}
 
 		header#topo .cover {
-			background-color: #46295a;
+			background-color: #5b0e5c;
 		}
 
 		header#topo .info h1 {
-			color: #46295a#46295a#46295a;
+			color: #5b0e5c;
 		}
 
 		header#topo .info .icones a {
-			color: #46295a;
-			border-color: #46295a;
+			color: #5b0e5c;
+			border-color: #5b0e5c;
 		}
 
 		header#topo .cover .logo {
-			background: #46295a;
+			background: #5b0e5c;
 		}
 
 		header#topo #menuCategorias {
-			background: #46295a;
+			background: #5b0e5c;
 		}
 
 		header#topo .categorias a {
-			border-top-color: #46295a;
+			border-top-color: #5b0e5c;
 		}
 
 		footer {
-			background: #46295a;
+			background: #5b0e5c;
 		}
 
 		footer#carrinho .container .icone span {
-			color: #46295a;
+			color: #5b0e5c;
 		}
 
 		.btn,
@@ -59,284 +57,80 @@
 		.btnGoogle,
 		.btnEmail,
 		.btnSemCadastro {
-			background: #46295a;
+			background: #5b0e5c;
 		}
 
 		.qtdeProduto i:hover {
-			color: #46295a;
+			color: #5b0e5c;
 		}
 
 		.lista .item .col .nomeProduto {
-			color: #46295a;
+			color: #5b0e5c;
 		}
 
 		main#lista .produtos .item a:hover {
-			border: 2px solid #46295a;
+			border: 2px solid #5b0e5c;
 		}
 
 		#pedido .entrega .radio label input[type="radio"]:checked,
 		#pedido .entrega .radio label:hover {
-			background: #46295a;
+			background: #5b0e5c;
 		}
 
 		#pedido .pagamentos input[type="radio"]:checked+label::before,
 		#detalhesProduto .info2 .opcoes input[type="checkbox"]:checked+label::before,
 		#pedido .trocarPontos input[type="checkbox"]:checked+label::before {
-			background-color: #46295a;
-			border: 2px solid #46295a;
+			background-color: #5b0e5c;
+			border: 2px solid #5b0e5c;
 		}
 
 		.selecionado {
-			border: 2px solid #46295a;
+			border: 2px solid #5b0e5c;
 		}
 
 		#meuCarrinho button.fechar,
 		#rastreamento .registro span.passou {
-			background: #46295a;
+			background: #5b0e5c;
 		}
 
 		span.estoque i {
-			color: #46295a;
+			color: #5b0e5c;
 		}
-		
-		/* Estilos para o modal de acompanhamentos */
-		#modalAcompanhamentos {
-			display: none;
-			position: fixed;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			width: 90%;
-			max-width: 500px;
-			background: white;
-			padding: 20px;
-			border-radius: 10px;
-			box-shadow: 0 0 20px rgba(0,0,0,0.2);
-			z-index: 1001;
-		}
-		
-		#modalAcompanhamentos h3 {
-			color: #46295a;
-			margin-bottom: 15px;
-			text-align: center;
-		}
-		
-		#modalAcompanhamentos .acompanhamento-option {
-			margin: 10px 0;
-			padding: 10px;
-			border: 1px solid #ddd;
-			border-radius: 5px;
-		}
-		
-		#modalAcompanhamentos {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-		}
-
-		.modal-buttons {
-			margin-top: 15px;
-			padding-top: 15px;
-			text-align: center;
-			border-top: 1px solid #eee;
-			display: flex;
-			justify-content: space-around;
-			gap: 10px;
-		}
-
-		.modal-buttons .btn {
-			padding: 10px 20px;
-			border: none;
-			border-radius: 8px;
-			cursor: pointer;
-			font-weight: bold;
-		}
-
-		.modal-buttons .btn-cancelar {
-			background: #f1f1f1;
-			color: #333;
-		}
-
-		.modal-buttons .btn-confirmar {
-			background: #46295a;
-			color: white;
-		}
-		
-		#modalOverlay {
-			display: none;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: rgba(0,0,0,0.5);
-			z-index: 1000;
-		}
-		
-		.countdown {
-			display: flex;
-			justify-content: center;
-			gap: 15px;
-			margin-top: 10px;
-		}
-		
-		.countdown .box {
-			text-align: center;
-		}
-		
-		.countdown span {
-			font-size: 24px;
-			font-weight: bold;
-			color: red;
-		}
-		
-		.countdown p {
-			margin: 5px 0 0;
-			font-size: 12px;
-		}
-
-		/* Estilos para o modal com scroll */
-		#modalAcompanhamentos {
-			display: none;
-			position: fixed;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			width: 90%;
-			max-width: 500px;
-			max-height: 80vh;
-			background: white;
-			padding: 20px;
-			border-radius: 10px;
-			box-shadow: 0 0 20px rgba(0,0,0,0.2);
-			z-index: 1001;
-			flex-direction: column;
-		}
-
-		.acompanhamentos-container {
-			overflow-y: auto;
-			max-height: 60vh;
-			padding-right: 10px;
-			margin: 10px 0;
-		}
-
-		/* Personalização da scrollbar */
-		.acompanhamentos-container::-webkit-scrollbar {
-			width: 8px;
-		}
-
-		.acompanhamentos-container::-webkit-scrollbar-track {
-			background: #f1f1f1;
-			border-radius: 10px;
-		}
-
-		.acompanhamentos-container::-webkit-scrollbar-thumb {
-			background: #46295a;
-			border-radius: 10px;
-		}
-
-		.acompanhamentos-container::-webkit-scrollbar-thumb:hover {
-			background: #3a1f4a;
-		}
-
-		.category-section {
-			margin-bottom: 15px;
-			padding: 10px;
-			background-color: #f9f9f9;
-			border-radius: 8px;
-		}
-
-		.category-title {
-			color: #46295a;
-			margin: 0 0 10px 0;
-			font-size: 15px;
-			font-weight: 600;
-		}
-
-		.acompanhamento-option {
-			display: inline-block;
-			width: 48%;
-			margin: 5px 0;
-			padding: 5px;
-			box-sizing: border-box;
-		}
-
-				/* Estilo para o container dos botões */
-		#modalButtonsContainer {
-			position: fixed;
-			top: calc(50% + 40vh);
-			left: 50%;
-			transform: translateX(-50%);
-			width: 90%;
-			max-width: 500px;
-			z-index: 1002;
-			background: white;
-			padding: 15px 20px;
-			border-radius: 0 0 10px 10px;
-			box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-		}
-
-		.modal-buttons-rectangle {
-			display: flex;
-			justify-content: space-around;
-			gap: 10px;
-		}
-
-		.modal-buttons-rectangle .btn {
-			padding: 12px 25px;
-			border: none;
-			border-radius: 8px;
-			cursor: pointer;
-			font-weight: bold;
-			font-size: 16px;
-			flex: 1;
-		}
-
-		.modal-buttons-rectangle .btn-cancelar {
-			background: #f1f1f1;
-			color: #333;
-		}
-
-		.modal-buttons-rectangle .btn-confirmar {
-			background: #46295a;
-			color: white;
-		}
-
 	</style>
-	<meta name="theme-color" content="#46295a">
+	<meta name="theme-color" content="#5b0e5c">
 	<meta name="apple-mobile-web-app-capacity" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar" content="#46295a">
-	<meta name="apple-mobile-web-app-status-bar-style" content="#46295a">
-	<meta name="apple-mobile-web-app-title" content="Açaílandia - Delivery">
+	<meta name="apple-mobile-web-app-status-bar" content="#5b0e5c">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#5b0e5c">
+	<meta name="apple-mobile-web-app-title" content="Açaí Nacional">
 	<!-- SweetAlert2 -->
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+
 
 </head>
 
 <body>
-	
 	<div id="opacidade" class="fechar"></div>
 	<div>
 		<header id="topo">
 			<div class="cover main" style="
-            background-image: url(images/capa1.jpg);
-            ">
+            background-image: url(images/background.webp);
+          ">
 				<div class="logo">
 					<figure>
-						<img src="images/logoreal.png" alt="Açaílandia - Delivery" title="Açaílandia - Delivery">
+						<img src="images/logo.png" alt="Açaí Nacional" title="Açaí Nacional">
 					</figure>
 				</div>
 				<div class="borda"></div>
 			</div>
 			<div class="container">
 				<div class="info">
-					<h1>Açaílandia - Delivery</h1>
-					Tecnologia PushinPay - Cardapios Digitais
+					<h1>Açaí Delli Delivery</h1>
 					<div class="icones">
-					<a href="https://www.instagram.com/acailandiaofc/" title="Instagram" target="_blank">
+					<a href="https://www.instagram.com/" title="Instagram" target="_blank">
 							<i class="fab fa-instagram"></i> 
 						</a>
 						<a class="informacoes" href="#info" title="Info">
@@ -390,14 +184,52 @@
 					
 						atualizarStatusLoja();
 					</script>
+					<!-- <div class="detalhe mostrarHorario">
+						<i class="fa-solid fa-clock"></i> Horário de Funcionamento
+						<span><i class="fa-solid fa-angle-down"></i></span>
+					</div> -->
+					<!-- <div class="horarios">
+						<div class="item">
+							<div>Segunda-feira</div>
+							<div>10:00 ~ 23:30</div>
+						</div>
+						<div class="item">
+							<div>Terça-feira</div>
+							<div>10:00 ~ 23:30</div>
+						</div>
+						<div class="item">
+							<div>Quarta-feira</div>
+							<div>10:00 ~ 23:30</div>
+						</div>
+						<div class="item">
+							<div>Quinta-feira</div>
+							<div>10:00 ~ 23:30</div>
+						</div>
+						<div class="item">
+							<div>Sexta-feira</div>
+							<div>10:00 ~ 23:30</div>
+						</div>
+						<div class="item">
+							<div>Sábado</div>
+							<div>10:00 ~ 23:30</div>
+						</div>
+						<div class="item">
+							<div>Domingo</div>
+							<div>10:00 ~ 23:30</div>
+						</div>
+					</div> -->
 				</div>
 			</div>
 			<div id="menuCategorias">
 				<div class="container">
 					<div class="categorias" style="">
-						<a href="#pague-1-leve-2" title="Mais Vendidos">
-							Mais Vendidos
+						<a href="#pague-1-leve-2" title="Pague 1, Leve 2">
+							Pague 1, Leve 2
 						</a>
+						<a href="#pague-1-leve-2-zero" title="Pague 1, Leve 2 - Zero Açúcar"> Pague 1, Leve 2 - Zero
+							Açúcar </a>
+						<a href="#acai" title="Pague 1, Leve 2 - Zero Açúcar"> Açaí </a>
+						<a href="#acai-zero" title="Pague 1, Leve 2 - Zero Açúcar"> Açaí Zero</a>
 					</div>
 				</div>
 			</div>
@@ -407,56 +239,57 @@
 				<div class="alert alert-success">
 					<b>Entrega Grátis</b> para <b id="localCidade">sua região</b>!
 				</div>
-				<div class="alert alert-success" style="color: orange;outline: 2px solid orange;">
-					Você acha que todas os açaís são iguais? Experimente e surpreenda-se! </br><b>-</b> Açaís deliciosos 💜
+				<div class="alert alert-success" style="color: purple;outline: 2px solid purple;">
+					Aproveite nossa <b>promoção com preços irresistíveis</b> igual Açaí 💜
 				</div>
-				<div id="Mais Vendidos" class="categoria">
-					<h2>Mais Vendido</h2>
+				
+				<div id="pague-1-leve-2" class="categoria">
+					<h2>Pague 1, Leve 2</h2>
 					<div class="produtos">
 						<div class="item">
-							<a class="disponivel" href="#" onclick="abrirModalAcompanhamentos('produto1')">
+							<a class="disponivel" href="produtos/acai/pague-1-leve-2-300ml">
 								<div class="texto">
-									<h3>🟣 Tamanho P (300 ml) </h3>
-									<span>Mini Energia – Pequeno no tamanho, gigante no sabor.</span>
-									de <span class="precoPromocao">R$ 24,90</span> por
-									<span class="preco"> R$ 13,90 </span>
+									<h3>2 Copos Açaí 300ml</h3>
+									<span>9 Complementos Grátis</span>
+									de <span class="precoPromocao">R$ 39,80</span> por
+									<span class="preco"> R$ 23,90 </span>
 								</div>
 								<div class="fotoProduto">
 									<figure>
-										<img src="images/100açai.png" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
+										<img src="images/copo2.webp" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
 									</figure>
 								</div>
 							</a>
 						</div>
 						<div class="item">
-							<a class="disponivel" href="#" onclick="abrirModalAcompanhamentos('produto2')">
+							<a class="disponivel" href="produtos/acai/pague-1-leve-2-500ml">
 								<div class="texto">
-									<h3>🟣 Tamanho M (500 ml)</h3>
-									<span>Combo Clássico</span>
-									de <span class="precoPromocao">R$ 29,90</span> por
-									<span class="preco"> R$ 17,90 </span>
+									<h3>2 Copos Açaí 500ml</h3>
+									<span>9 Complementos Grátis</span>
+									de <span class="precoPromocao">R$ 43,80</span> por
+									<span class="preco"> R$ 26,90 </span>
 								</div>
 								<div class="fotoProduto">
 									<figure>
-										<img src="images/100açai2.png" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
+										<img src="images/copo2.webp" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
 									</figure>
 								</div>
 							</a>
 						</div>
 						<div class="item">
-							<a class="disponivel" href="#" onclick="abrirModalAcompanhamentos('produto3')" style="border: 2px solid #077c22;">
+							<a class="disponivel pulsar" href="produtos/acai/pague-1-leve-2-700ml" style="border: 2px solid #077c22;">
 								<div class="texto">
 									<span style="
 										color: #5b0e5c; background: #f1cdf2; padding: 2px 2px; margin-bottom: 2px;
 										border-radius: 8px; text-align: center;"><b>MAIS VENDIDO 💜</b></span>
-									<h3>🟣 Tamanho G (700 ml)</h3>
-									<span>Gigante Roxo</span>
+									<h3>2 Copos Açaí 700ml</h3>
+									<span>9 Complementos Grátis</span>
 									<span style="
 									color: #474747; background: #e8e8e8; padding: 10px 10px; margin-bottom: 2px; margin-top: 2px;
-									border-radius: 8px; text-align: left;"><b>Oferta ilimitada</b>!</span>
-									de <span class="precoPromocao">R$ 49,90</span> por
+									border-radius: 8px; text-align: left;">Mais que o dobro do Combo 1 por apenas <b>R$7 a mais</b>!</span>
+									de <span class="precoPromocao">R$ 53,80</span> por
 									<span class="preco" style="font-size: 20px;"> <b style="background: #077c22; color: white; border-radius: 8px; padding: 0px 4px;">R$
-											19,90</b> </span>
+											29,90</b> </span>
 									<span><i>A maioria dos clientes escolhe esse porque é o melhor
 											custo-benefício!</i></span>
 									<span class="estoque" style="margin-top: 4px;">🔥 Apenas <b style="background: red; color: white; border-radius: 8px; padding: 0px 4px;"><span id="estoqueCombo">8</span>
@@ -464,311 +297,340 @@
 								</div>
 								<div class="fotoProduto">
 									<figure>
-										<img src="images/100açai3.png" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
+										<img src="images/copo2.webp" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
 									</figure>
 								</div>
 							</a>
 						</div>
-						
+						<div class="alert alert-success" style="color: red;outline: 2px solid red; background-color: rgb(255, 217, 217);">
+							<b>A promoção vai acabar em:</b>
+							<div class="countdown">
+								<!-- <div class="box">
+								<span id="days">00</span>
+								<p>Dias</p>
+								</div>
+								<div class="box">
+								<span id="hours">00</span>
+								<p>Horas</p>
+								</div> -->
+								<div class="box">
+									<span id="minutes">00</span>
+									<p>Minutos</p>
+								</div>
+								<div class="box">
+									<span id="seconds">00</span>
+									<p>Segundos</p>
+								</div>
+							</div>
+						</div>
 						<div class="item">
-							<a class="disponivel" href="#" onclick="abrirModalAcompanhamentos('produto4')">
+							<a class="disponivel" href="produtos/acai/pague-1-leve-2-1l">
 								<div class="texto">
-									<h3>🟣 Tamanho GG (1,5 L)</h3>
-									<span>Balde da Felicidade – Ideal para compartilhar com a galera.</span>
-									de <span class="precoPromocao">R$ 59,90</span> por
-									<span class="preco"> R$ 29,90 </span>
+									<h3>2 Copos Açaí 1L</h3>
+									<span>9 Complementos Grátis</span>
+									de <span class="precoPromocao">R$ 75,80</span> por
+									<span class="preco"> R$ 37,90 </span>
 								</div>
 								<div class="fotoProduto">
 									<figure>
-										<img src="images/100açai4.png" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
+										<img src="images/copo2.webp" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
 									</figure>
 								</div>
 							</a>
 						</div>
 					</div>
 				</div>
-				
-				<div class="alert alert-success" style="color: red;outline: 2px solid red; background-color: rgb(255, 217, 217);">
-					<b>A promoção vai acabar em:</b>
-					<div class="countdown">
-						<div class="box">
-							<span id="minutes">15</span>
-							<p>Minutos</p>
+				<div id="pague-1-leve-2-zero" class="categoria">
+					<h2>Pague 1, Leve 2 - Zero Açúcar</h2>
+					<div class="produtos">
+						<div class="item">
+							<a class="disponivel" href="produtos/acai/pague-1-leve-2-300ml-zero">
+								<div class="texto">
+									<h3>2 Copos Açaí 300ml ZERO</h3>
+									<span>9 Complementos Grátis</span>
+									de <span class="precoPromocao">R$ 45,80</span> por
+									<span class="preco"> R$ 26,90 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/zero2.webp" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
+									</figure>
+								</div>
+							</a>
 						</div>
-						<div class="box">
-							<span id="seconds">00</span>
-							<p>Segundos</p>
+						<div class="item">
+							<a class="disponivel" href="produtos/acai/pague-1-leve-2-500ml-zero">
+								<div class="texto">
+									<h3>2 Copos Açaí 500ml ZERO</h3>
+									<span>9 Complementos Grátis</span>
+									de <span class="precoPromocao">R$ 49,80</span> por
+									<span class="preco"> R$ 29,90 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/zero2.webp" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
+									</figure>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<a class="disponivel pulsar" href="produtos/acai/pague-1-leve-2-700ml-zero" style="border: 2px solid #077c22;">
+								<div class="texto">
+									<span style="
+										color: #5b0e5c; background: #f1cdf2; padding: 2px 2px; margin-bottom: 2px;
+										border-radius: 8px; text-align: center;"><b>MAIS VENDIDO 💜</b></span>
+									<h3>2 Copos Açaí 700ml ZERO</h3>
+									<span>9 Complementos Grátis</span>
+									<span style="
+									color: #474747; background: #e8e8e8; padding: 10px 10px; margin-bottom: 2px; margin-top: 2px;
+									border-radius: 8px; text-align: left;">Mais que o dobro do Combo 1 por apenas <b>R$7 a mais</b>!</span>
+									de <span class="precoPromocao">R$ 59,80</span> por
+									<span class="preco" style="font-size: 20px;"> <b style="background: #077c22; color: white; border-radius: 8px; padding: 0px 4px;">R$
+											32,90</b> </span>
+									<span><i>A maioria dos clientes escolhe esse porque é o melhor
+											custo-benefício!</i></span>
+									<span class="estoque" style="margin-top: 4px;">🔥 Apenas <b style="background: red; color: white; border-radius: 8px; padding: 0px 4px;"><span id="estoqueCombo">16</span>
+											combo(s)</b> com esse preço especial</span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/zero2.webp" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
+									</figure>
+								</div>
+							</a>
+						</div>
+						<div class="alert alert-success" style="color: red;outline: 2px solid red; background-color: rgb(255, 217, 217);">
+							<b>A promoção vai acabar em:</b>
+							<div class="countdown">
+								<!-- <div class="box">
+								<span id="days">00</span>
+								<p>Dias</p>
+								</div>
+								<div class="box">
+								<span id="hours">00</span>
+								<p>Horas</p>
+								</div> -->
+								<div class="box">
+									<span id="minutes">00</span>
+									<p>Minutos</p>
+								</div>
+								<div class="box">
+									<span id="seconds">00</span>
+									<p>Segundos</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<a class="disponivel" href="produtos/acai/pague-1-leve-2-1l-zero">
+								<div class="texto">
+									<h3>2 Copos Açaí 1L ZERO</h3>
+									<span>9 Complementos Grátis</span>
+									de <span class="precoPromocao">R$ 81,80</span> por
+									<span class="preco"> R$ 40,90 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/zero2.webp" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
+									</figure>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div id="acai" class="categoria">
+					<h2>Açaí</h2>
+					<div class="produtos">
+						<div class="item">
+							<a class="disponivel" href="produtos/acai/acai-300ml">
+								<div class="texto">
+									<h3>1 Copo Açaí 300ml</h3>
+									<span>9 Complementos Grátis</span>
+									por
+									<span class="preco"> R$ 16,90 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/copo1.webp" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
+									</figure>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<a class="disponivel" href="produtos/acai/acai-500ml">
+								<div class="texto">
+									<h3>1 Copo Açaí 500ml</h3>
+									<span>9 Complementos Grátis</span>
+									por
+									<span class="preco"> R$ 20,90 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/copo1.webp" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
+									</figure>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<a class="disponivel" href="produtos/acai/acai-700ml">
+								<div class="texto">
+									<h3>1 Copo Açaí 700ml</h3>
+									<span>9 Complementos Grátis</span>
+									por
+									<span class="preco" style="font-size: 20px;"> R$ 23,90 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/copo1.webp" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
+									</figure>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<a class="disponivel" href="produtos/acai/acai-1l">
+								<div class="texto">
+									<h3>1 Copo Açaí 1L</h3>
+									<span>9 Complementos Grátis</span>
+									por
+									<span class="preco"> R$ 30,90 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/copo1.webp" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
+									</figure>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<a class="disponivel pulsar" href="./produtos/acai/super-barcar-acai-850g-ate-2-pessoas" style="border: 2px solid #077c22;" id="18">
+							  <div class="texto">
+								<span style="
+															  color: #5b0e5c; background: #f1cdf2; padding: 2px 2px; margin-bottom: 2px;
+															  border-radius: 8px; text-align: center;">
+								  <b>MAIS VENDIDO 💜</b>
+								</span>
+								<h3>Super Barca Açaí 850G Até 2 Pessoas</h3>
+								<span>9 Complementos Grátis</span>
+								<span style="
+										  color: #474747; background: #e8e8e8; padding: 10px 10px; margin-bottom: 2px; margin-top: 2px;
+										  border-radius: 8px; text-align: left;">
+								  Mais que o dobro do Combo 1 por apenas
+								  <b>R$7 a mais</b>!
+								</span>
+								de
+								<span class="precoPromocao">
+								  R$ 69,99
+								</span>
+								por
+								<span class="preco" style="font-size: 20px;">
+								  <b style="background: #077c22; color: white; border-radius: 8px; padding: 0px 4px;">
+									R$ 49,00
+								  </b>
+								</span>
+								<span>
+								  <i>A maioria dos clientes escolhe esse porque é o melhor custo-benefício!</i>
+								</span>
+								<span class="estoque" style="margin-top: 4px;">🔥 Apenas <b style="background: red; color: white; border-radius: 8px; padding: 0px 4px;">
+									<span id="estoqueCombo">38</span> combo(s) </b> com esse preço especial </span>
+							  </div>
+							  <div class="fotoProduto">
+								<figure>
+								  <img src="images/01JS4QB2G7ZBK3KGEHHNWVE99F.jpeg" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
+								</figure>
+							  </div>
+							</a>
+						  </div>
+						  <div class="alert alert-success" style="color: red;outline: 2px solid red; background-color: rgb(255, 217, 217);">
+							<b>A promoção vai acabar em:</b>
+							<div class="countdown">
+							  <!-- <div class="box"><span id="days">00</span><p>Dias</p></div><div class="box"><span id="hours">00</span><p>Horas</p></div> -->
+							  <div class="box">
+								<span id="minutes">59</span>
+								<p>Minutos</p>
+							  </div>
+							  <div class="box">
+								<span id="seconds">59</span>
+								<p>Segundos</p>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="acai-zero" class="categoria">
+					<h2>Açaí Zero Açúcar</h2>
+					<div class="produtos">
+						<div class="item">
+							<a class="disponivel" href="produtos/acai/acai-300ml-zero">
+								<div class="texto">
+									<h3>1 Copo Açaí 300ml ZERO</h3>
+									<span>9 Complementos Grátis</span>
+									por
+									<span class="preco"> R$ 19,90 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/zero1.webp" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
+									</figure>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<a class="disponivel" href="produtos/acai/acai-500ml-zero">
+								<div class="texto">
+									<h3>1 Copo Açaí 500ml ZERO</h3>
+									<span>9 Complementos Grátis</span>
+									por
+									<span class="preco"> R$ 22,90 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/zero1.webp" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
+									</figure>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<a class="disponivel" href="produtos/acai/acai-700ml-zero">
+								<div class="texto">
+									<h3>1 Copo Açaí 700ml ZERO</h3>
+									<span>9 Complementos Grátis</span>
+									por
+									<span class="preco" style="font-size: 20px;"> R$ 26,90 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/zero1.webp" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
+									</figure>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<a class="disponivel" href="produtos/acai/acai-1l-zero">
+								<div class="texto">
+									<h3>1 Copo Açaí 1L ZERO</h3>
+									<span>9 Complementos Grátis</span>
+									por
+									<span class="preco"> R$ 32,90 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/zero1.webp" width="110px" height="110px" loading="lazy" alt="(Apenas Retirada) Açaí 770ml">
+									</figure>
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</main>
-		
-		<!-- Modal de Acompanhamentos -->
-<div id="modalOverlay"></div>
-<div id="modalAcompanhamentos" style="display: none;">
-    <h3>Monte seu açaí perfeito</h3>    
-    
-    <div class="acompanhamentos-container">
-          <div class="category-section">
-            <h4 class="category-title">🍓 Frutas Frescas</h4>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp1" name="acompanhamento" value="Morango">
-                <label for="acomp1">Morango</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp2" name="acompanhamento" value="Banana">
-                <label for="acomp2">Banana</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp3" name="acompanhamento" value="Kiwi">
-                <label for="acomp3">Kiwi</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp4" name="acompanhamento" value="Manga">
-                <label for="acomp4">Manga</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp5" name="acompanhamento" value="Blueberry">
-                <label for="acomp5">Blueberry</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp19" name="acompanhamento" value="Uva">
-                <label for="acomp19">Uva</label>
-            </div>
-        </div>
-        
-        <div class="category-section">
-            <h4 class="category-title">🍬 Doces & Cremes</h4>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp6" name="acompanhamento" value="Leite Ninho">
-                <label for="acomp6">Leite Ninho</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp7" name="acompanhamento" value="Leite em Pó">
-                <label for="acomp7">Leite em Pó</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp8" name="acompanhamento" value="Paçoca">
-                <label for="acomp8">Paçoca</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp9" name="acompanhamento" value="Leite Condensado">
-                <label for="acomp9">Leite Condensado</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp10" name="acompanhamento" value="Nutella">
-                <label for="acomp10">Nutella</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp11" name="acompanhamento" value="Doce de Leite">
-                <label for="acomp11">Doce de Leite</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp20" name="acompanhamento" value="Bis">
-                <label for="acomp20">Bis</label>
-            </div>
-        </div>
-        
-        <div class="category-section">
-            <h4 class="category-title">🌰 Grãos & Crocantes</h4>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp12" name="acompanhamento" value="Granola">
-                <label for="acomp12">Granola</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp13" name="acompanhamento" value="Amendoim">
-                <label for="acomp13">Amendoim</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp14" name="acompanhamento" value="Castanha">
-                <label for="acomp14">Castanha</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp15" name="acompanhamento" value="Flocos de Arroz">
-                <label for="acomp15">Flocos de Arroz</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp21" name="acompanhamento" value="Aveia">
-                <label for="acomp21">Aveia</label>
-            </div>
-        </div>
-        
-        <div class="category-section">
-            <h4 class="category-title">🍯 Coberturas</h4>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp16" name="acompanhamento" value="Mel">
-                <label for="acomp16">Mel</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp17" name="acompanhamento" value="Calda de Chocolate">
-                <label for="acomp17">Calda de Chocolate</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp18" name="acompanhamento" value="Calda de Morango">
-                <label for="acomp18">Calda de Morango</label>
-            </div>
-            <div class="acompanhamento-option">
-                <input type="checkbox" id="acomp22" name="acompanhamento" value="Caramelo">
-                <label for="acomp22">Caramelo</label>
-            </div>
-        </div>
-    </div>
-    
-   <div id="modalButtonsContainer" style="display: none;">
-    <div class="modal-buttons-rectangle">
-        <button class="btn btn-cancelar" onclick="fecharModalAcompanhamentos()">Cancelar</button>
-        <button class="btn btn-confirmar" onclick="confirmarAcompanhamentos()">Confirmar</button>
-    </div>
-</div>
-		
-		<script>
-			// Variável global para armazenar o produto selecionado
-			let produtoSelecionado = '';
-			
-			// Função para abrir o modal de acompanhamentos
-			function abrirModalAcompanhamentos(produtoId) {
-			produtoSelecionado = produtoId;
-			document.getElementById('modalOverlay').style.display = 'block';
-			document.getElementById('modalAcompanhamentos').style.display = 'block';
-			document.getElementById('modalButtonsContainer').style.display = 'block';
-		}
-
-		function fecharModalAcompanhamentos() {
-			document.getElementById('modalOverlay').style.display = 'none';
-			document.getElementById('modalAcompanhamentos').style.display = 'none';
-			document.getElementById('modalButtonsContainer').style.display = 'none';
-			produtoSelecionado = '';
-			
-			// Desmarcar todos os checkboxes
-			const checkboxes = document.querySelectorAll('#modalAcompanhamentos input[type="checkbox"]');
-			checkboxes.forEach(checkbox => {
-				checkbox.checked = false;
-			});
-}
-			
-			// Função para confirmar os acompanhamentos e redirecionar para o pagamento
-			function confirmarAcompanhamentos() {
-				const checkboxes = document.querySelectorAll('#modalAcompanhamentos input[type="checkbox"]:checked');
-				
-				// Verificar se selecionou mais de 3 acompanhamentos
-				if (checkboxes.length > 10) {
-					Swal.fire({
-						icon: 'error',
-						title: 'Ops...',
-						text: 'Você pode selecionar no máximo 10 acompanhamentos!'
-					});
-					return;
-				}
-				
-				// Mapeamento dos produtos e seus links de pagamento
-				const produtos = {
-					"produto1": { // Tamanho P (300ml)
-						"0": {link: "https://app.pushinpay.com.br/service/pay/9F685160-B205-4F94-823C-62FB67B1497E", valor: "19.00"},
-						"1": {link: "https://app.pushinpay.com.br/service/pay/9F685160-B205-4F94-823C-62FB67B1497E", valor: "19.00"},
-						"2": {link: "https://app.pushinpay.com.br/service/pay/9F68519A-DFB7-4C0A-BAF2-CD65BE561B87", valor: "24.90"},
-						"3": {link: "https://app.pushinpay.com.br/service/pay/9F6851C3-6726-45BA-83F3-7125A16F1C3C", valor: "29.90"},
-						"default": {link: "https://app.pushinpay.com.br/service/pay/9F6851EE-713C-4704-8D29-19EDDF82D81E", valor: "59.90"}
-					},
-					"produto2": { // Tamanho M (500ml)
-						"0": {link: "https://app.pushinpay.com.br/service/pay/9F68519A-DFB7-4C0A-BAF2-CD65BE561B87", valor: "24.90"},
-						"1": {link: "https://app.pushinpay.com.br/service/pay/9F68519A-DFB7-4C0A-BAF2-CD65BE561B87", valor: "24.90"},
-						"default": {link: "https://app.pushinpay.com.br/service/pay/9F6851C3-6726-45BA-83F3-7125A16F1C3C", valor: "29.90"}
-					},
-					"produto3": { // Tamanho G (700ml)
-						"default": {link: "https://app.pushinpay.com.br/service/pay/9F6851C3-6726-45BA-83F3-7125A16F1C3C", valor: "29.90"}
-					},
-					"produto4": { // Tamanho GG (1,5L)
-						"default": {link: "https://app.pushinpay.com.br/service/pay/9F6851EE-713C-4704-8D29-19EDDF82D81E", valor: "59.90"}
-					}
-				};
-				
-				// Verificar se o produto existe
-				if (!produtos[produtoSelecionado]) {
-					Swal.fire({
-						icon: 'error',
-						title: 'Erro',
-						text: 'Produto não encontrado!'
-					});
-					return;
-				}
-				
-				// Determinar qual link usar baseado na quantidade de acompanhamentos
-				const qtdAcompanhamentos = checkboxes.length.toString();
-				const produto = produtos[produtoSelecionado][qtdAcompanhamentos] || produtos[produtoSelecionado]["default"];
-				
-				// Criar a URL
-				const url = new URL(produto.link);
-				
-				// Adicionar parâmetros dos acompanhamentos
-				checkboxes.forEach((checkbox, index) => {
-					url.searchParams.append(`acompanhamento_${index + 1}`, checkbox.value);
-				});
-				
-				// Adicionar valor total
-				url.searchParams.append('valor_total', produto.valor);
-				
-				// Mostrar loading e redirecionar
-				Swal.fire({
-					title: 'Redirecionando para pagamento...',
-					allowOutsideClick: false,
-					didOpen: () => {
-						Swal.showLoading();
-						setTimeout(() => {
-							window.location.href = url.toString();
-						}, 1000);
-					}
-				});
-			}
-			
-			// Contador regressivo
-			function startCountdown() {
-				let minutes = 15;
-				let seconds = 0;
-				
-				const countdown = setInterval(function() {
-					document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-					document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-					
-					if (seconds === 0) {
-						if (minutes === 0) {
-							clearInterval(countdown);
-							document.querySelector('.countdown').innerHTML = '<span style="color:red;">A promoção terminou!</span>';
-						} else {
-							minutes--;
-							seconds = 59;
-						}
-					} else {
-						seconds--;
-					}
-					
-					// Atualizar estoque aleatoriamente quando faltar pouco tempo
-					if (minutes === 2 && seconds === 0) {
-						const estoque = Math.floor(Math.random() * 5) + 1;
-						document.getElementById('estoqueCombo').textContent = estoque;
-					}
-				}, 1000);
-			}
-			
-			// Iniciar o contador quando a página carregar
-			window.onload = function() {
-				startCountdown();
-			};
-		</script>
-</body>
-
-							
-			</div>
-		</div></div></div></div></main>
 		<main id="lista">
 			<div class="container">
 				<div class="alert">
 					<b style="font-size: 20px;">4,8</b><br>
-					<i class="fa fa-star" aria-hidden="true" style="color: #46295a;"></i>
-					<i class="fa fa-star" aria-hidden="true" style="color: #46295a;"></i>
-					<i class="fa fa-star" aria-hidden="true" style="color: #46295a;"></i>
-					<i class="fa fa-star" aria-hidden="true" style="color: #46295a;"></i>
-					<i class="fa fa-star-half-alt" aria-hidden="true" style="color: #46295a;"></i>
+					<i class="fa fa-star" aria-hidden="true" style="color: goldenrod;"></i>
+					<i class="fa fa-star" aria-hidden="true" style="color: goldenrod;"></i>
+					<i class="fa fa-star" aria-hidden="true" style="color: goldenrod;"></i>
+					<i class="fa fa-star" aria-hidden="true" style="color: goldenrod;"></i>
+					<i class="fa fa-star-half-alt" aria-hidden="true" style="color: goldenrod;"></i>
 					<br>
 					<b>136 avaliações</b> • últimos 90 dias
 					<br>
@@ -782,155 +644,155 @@
 						<!-- Avaliação 1 -->
 						<div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd;">
 							<div class="avaliacao" style="flex-grow: 1;">
-								<h3 style="margin: 0; font-size: 16px; color: #333;">Laysa</h3>
+								<h3 style="margin: 0; font-size: 16px; color: #333;">Cinthia</h3>
 								<div style="display: flex; align-items: center;">
 									<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
 									<span class="estrelas" style="display: flex;">
-										<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-										<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-										<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-										<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-										<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
 									</span>
 									<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
 								</div>
-								<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Simplesmente perfeito! O açaí chegou geladinho, super cremoso e com os complementos bem caprichados. Pedido chegou rápido, virei cliente fiel! </p>
+								<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Chegou geladinho, bem embalado e do jeito que pedi. </p>
 							</div>
 							<div class="fotoProduto" style="margin-left: 15px;">
 								<figure style="margin: 0;">
-									<img src="prova1.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+									<img src="images/1.webp" width="70px" height="70px" loading="lazy" style="border-radius: 8px; cursor: pointer;" onclick="expandirImagem(this)">
 								</figure>
 							</div>
 						</div>
 				
 				
-						<!-- Avaliação 2 -->
+						<!-- Avaliação 3 -->
 						<div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd;">
 							<div class="avaliacao" style="flex-grow: 1;">
-								<h3 style="margin: 0; font-size: 16px; color: #333;">Nadia</h3>
+								<h3 style="margin: 0; font-size: 16px; color: #333;">Lucas</h3>
 								<div style="display: flex; align-items: center;">
 									<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
 									<span class="estrelas" style="display: flex;">
-										<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-										<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-										<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-										<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-										<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
 									</span>
 									<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
 								</div>
-								<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Pedido entregue antes do prazo, tudo muito bem embalado e o açaí estava no ponto. Nota mil!</p>
+								<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Sinceramente? Melhor custo-benefício que já vi! Açaí bom, preço sensacional e entrega rápida.</p>
 							</div>
 							<div class="fotoProduto" style="margin-left: 15px;">
 								<figure style="margin: 0;">
-									<img src="prova2.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+									<img src="images/2.webp" width="70px" height="70px" loading="lazy" style="border-radius: 8px; cursor: pointer;" onclick="expandirImagem(this)">
 								</figure>
 							</div>
 						</div>
 						<!-- Avaliação 3 -->
 						<div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd;">
 							<div class="avaliacao" style="flex-grow: 1;">
-								<h3 style="margin: 0; font-size: 16px; color: #333;">Aline</h3>
+								<h3 style="margin: 0; font-size: 16px; color: #333;">Luiza</h3>
 								<div style="display: flex; align-items: center;">
 									<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
 									<span class="estrelas" style="display: flex;">
-										<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-										<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-										<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-										<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-										<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
 									</span>
 									<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
 								</div>
-								<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Excelente! Dá pra perceber o carinho no preparo. Tudo muito gostoso e chegou direitinho, recomendo muito!</p>
+								<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Pedi pra testar e agora já viciei kkk</p>
 							</div>
 							<div class="fotoProduto" style="margin-left: 15px;">
 								<figure style="margin: 0;">
-									<img src="prova3.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+									<img src="images/3.webp" width="70px" height="70px" loading="lazy" style="border-radius: 8px; cursor: pointer;" onclick="expandirImagem(this)">
 								</figure>
 							</div>
 						</div>
 				<!-- Avaliação 3 -->
 				<div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd;">
 					<div class="avaliacao" style="flex-grow: 1;">
-						<h3 style="margin: 0; font-size: 16px; color: #333;">Kamilly</h3>
+						<h3 style="margin: 0; font-size: 16px; color: #333;">Ronald</h3>
 						<div style="display: flex; align-items: center;">
 							<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
 							<span class="estrelas" style="display: flex;">
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
 							</span>
 							<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
 						</div>
-						<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Melhor açaí da região! Além de delicioso, a entrega foi super rápida. Recomendo demais!</p>
+						<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Quando vi o preço achei q ia ser pequeno, mas me enganei! Vem bem servido e a qualidade é absurda.</p>
 					</div>
 					<div class="fotoProduto" style="margin-left: 15px;">
 						<figure style="margin: 0;">
-							<img src="prova4.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+							<img src="images/4.webp" width="70px" height="70px" loading="lazy" style="border-radius: 8px; cursor: pointer;" onclick="expandirImagem(this)">
 						</figure>
 					</div>
 				</div>
 				<!-- Avaliação 3 -->
 				<div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd;">
 					<div class="avaliacao" style="flex-grow: 1;">
-						<h3 style="margin: 0; font-size: 16px; color: #333;">Karol</h3>
+						<h3 style="margin: 0; font-size: 16px; color: #333;">Carlla</h3>
 						<div style="display: flex; align-items: center;">
 							<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
 							<span class="estrelas" style="display: flex;">
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
 							</span>
 							<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
 						</div>
-						<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Maravilhoso! Dá pra sentir que o açaí é de qualidade, sem aquele gosto de xarope. Já pedi outras vezes e sempre perfeito!</p>
+						<p style="margin: 5px 0 0; font-size: 14px; color: #555;">entregaram dentro do prazo e o açaí é delicioso! Vou pedir mais loguinhoo</p>
 					</div>
 					<div class="fotoProduto" style="margin-left: 15px;">
 						<figure style="margin: 0;">
-							<img src="prova5.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+							<img src="images/5.webp" width="70px" height="70px" loading="lazy" style="border-radius: 8px; cursor: pointer;" onclick="expandirImagem(this)">
 						</figure>
 					</div>
 				</div>
 				<!-- Avaliação 3 -->
 				<div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd;">
 					<div class="avaliacao" style="flex-grow: 1;">
-						<h3 style="margin: 0; font-size: 16px; color: #333;">Talita</h3>
+						<h3 style="margin: 0; font-size: 16px; color: #333;">Gregory</h3>
 						<div style="display: flex; align-items: center;">
 							<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
 							<span class="estrelas" style="display: flex;">
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
 							</span>
 							<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
 						</div>
-						<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Sou fã do açaí de vocês! Sempre fresco, bem montado e com entrega rápida. Já indiquei pra toda minha família.</p>
+						<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Açaí cremoso, bem montado e chegou intacto. Parabéns a franquia.</p>
 					</div>
 					<div class="fotoProduto" style="margin-left: 15px;">
 						<figure style="margin: 0;">
-							<img src="prova7.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+							<img src="images/6.webp" width="70px" height="70px" loading="lazy" style="border-radius: 8px; cursor: pointer;" onclick="expandirImagem(this)">
 						</figure>
 					</div>
 				</div>
 				<!-- Avaliação 3 -->
 				<div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd;">
 					<div class="avaliacao" style="flex-grow: 1;">
-						<h3 style="margin: 0; font-size: 16px; color: #333;">Aline</h3>
+						<h3 style="margin: 0; font-size: 16px; color: #333;">Jussara</h3>
 						<div style="display: flex; align-items: center;">
 							<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
 							<span class="estrelas" style="display: flex;">
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
 							</span>
 							<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
 						</div>
@@ -938,22 +800,22 @@
 					</div>
 					<div class="fotoProduto" style="margin-left: 15px;">
 						<figure style="margin: 0;">
-							<img src="prova8.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+							<img src="images/7.webp" width="70px" height="70px" loading="lazy" style="border-radius: 8px; cursor: pointer;" onclick="expandirImagem(this)">
 						</figure>
 					</div>
 				</div>
 				<!-- Avaliação 3 -->
 				<div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd;">
 					<div class="avaliacao" style="flex-grow: 1;">
-						<h3 style="margin: 0; font-size: 16px; color: #333;">Iana</h3>
+						<h3 style="margin: 0; font-size: 16px; color: #333;">Julia</h3>
 						<div style="display: flex; align-items: center;">
 							<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
 							<span class="estrelas" style="display: flex;">
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
 							</span>
 							<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
 						</div>
@@ -961,76 +823,76 @@
 					</div>
 					<div class="fotoProduto" style="margin-left: 15px;">
 						<figure style="margin: 0;">
-							<img src="prova9.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+							<img src="images/8.webp" width="70px" height="70px" loading="lazy" style="border-radius: 8px; cursor: pointer;" onclick="expandirImagem(this)">
 						</figure>
 					</div>
 				</div>
 				<!-- Avaliação 3 -->
 				<div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd;">
 					<div class="avaliacao" style="flex-grow: 1;">
-						<h3 style="margin: 0; font-size: 16px; color: #333;">Gustavo</h3>
+						<h3 style="margin: 0; font-size: 16px; color: #333;">Jussara</h3>
 						<div style="display: flex; align-items: center;">
 							<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
 							<span class="estrelas" style="display: flex;">
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
 							</span>
 							<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
 						</div>
-						<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Atendimento nota 10! Açaí delicioso, complementos frescos e ainda chegou antes do esperado. Pedido perfeito!</p>
+						<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Açaí top, amei</p>
 					</div>
 					<div class="fotoProduto" style="margin-left: 15px;">
 						<figure style="margin: 0;">
-							<img src="prova10.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+							<img src="images/9.webp" width="70px" height="70px" loading="lazy" style="border-radius: 8px; cursor: pointer;" onclick="expandirImagem(this)">
 						</figure>
 					</div>
 				</div>
 				<!-- Avaliação 3 -->
 				<div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd;">
 					<div class="avaliacao" style="flex-grow: 1;">
-						<h3 style="margin: 0; font-size: 16px; color: #333;">Iana</h3>
+						<h3 style="margin: 0; font-size: 16px; color: #333;">Isabely</h3>
 						<div style="display: flex; align-items: center;">
 							<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
 							<span class="estrelas" style="display: flex;">
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
 							</span>
 							<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
 						</div>
-						<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Açaí top! Textura incrível, sabor equilibrado e os acompanhamentos fresquinhos. Chegou tudo certinho, continuem assim!</p>
+						<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Gostei muito Sério kkk</p>
 					</div>
 					<div class="fotoProduto" style="margin-left: 15px;">
 						<figure style="margin: 0;">
-							<img src="prova11.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+							<img src="images/10.webp" width="70px" height="70px" loading="lazy" style="border-radius: 8px; cursor: pointer;" onclick="expandirImagem(this)">
 						</figure>
 					</div>
 				</div>
 				<!-- Avaliação 3 -->
 				<div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd;">
 					<div class="avaliacao" style="flex-grow: 1;">
-						<h3 style="margin: 0; font-size: 16px; color: #333;">Mari</h3>
+						<h3 style="margin: 0; font-size: 16px; color: #333;">Kaue</h3>
 						<div style="display: flex; align-items: center;">
 							<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
 							<span class="estrelas" style="display: flex;">
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
 							</span>
 							<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
 						</div>
-						<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Experiência excelente! Atendimento atencioso, entrega rápida e o açaí super gostoso. Vale cada centavo!</p>
+						<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Muito bom, esta de parabéns</p>
 					</div>
 					<div class="fotoProduto" style="margin-left: 15px;">
 						<figure style="margin: 0;">
-							<img src="prova12.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+							<img src="images/11.webp" width="70px" height="70px" loading="lazy" style="border-radius: 8px; cursor: pointer;" onclick="expandirImagem(this)">
 						</figure>
 					</div>
 				</div>
@@ -1041,19 +903,19 @@
 						<div style="display: flex; align-items: center;">
 							<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
 							<span class="estrelas" style="display: flex;">
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
-								<i class="fa fa-star" style="color: #46295a; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+								<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
 							</span>
 							<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
 						</div>
-						<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Fiquei surpresa com a qualidade! O açaí é consistente, os toppings vieram bem servidos e a entrega foi super rápida.</p>
+						<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Me deram um pacotinho de Bala Fini de Brinde no primeiro pedido escrito "para adoçar seu dia", ameiiii nota 10!!!!</p>
 					</div>
 					<div class="fotoProduto" style="margin-left: 15px;">
 						<figure style="margin: 0;">
-							<img src="prova13.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+							<img src="images/12.webp" width="70px" height="70px" loading="lazy" style="border-radius: 8px; cursor: pointer;" onclick="expandirImagem(this)">
 						</figure>
 					</div>
 				</div>
@@ -1091,7 +953,27 @@
 						}
 					}
 				</script>
-					
+					<div class="alert alert-success" style="color: red;outline: 2px solid red; background-color: rgb(255, 217, 217);
+						padding: 20px 10px;">
+						<b>A promoção vai acabar em:</b>
+						<div class="countdown">
+							<!-- <div class="box">
+								<span id="days">00</span>
+								<p>Dias</p>
+								</div>
+								<div class="box">
+								<span id="hours">00</span>
+								<p>Horas</p>
+								</div> -->
+							<div class="box">
+								<span id="minutes">00</span>
+								<p>Minutos</p>
+							</div>
+							<div class="box">
+								<span id="seconds">00</span>
+								<p>Segundos</p>
+							</div>
+						</div>
 						<a href="#pague-1-leve-2" style="background-color: white; border-radius: 8px;
 						padding: 4px 10px; color:#5b0e5c">Clique Para Ver Açaís em Promoção 💜</a>
 					</div>
@@ -6915,21 +6797,17 @@
 			});
 
 			let { value: cidadeEscolhida } = await Swal.fire({
-                title: "Estamos quase lá...",
-                text: "Agora, selecione sua cidade:",
-                input: "select",
-                inputOptions: quais_opt_de_cidade,
-                inputValue: quais_opt_de_cidade.indexOf(cidadeTemp),
-                confirmButtonText: "Procurar loja mais próxima!",
-                confirmButtonColor: "green",
-                allowOutsideClick: false,
-                allowEscapeKey: false,
-                inputValidator: value => value ? undefined : "Por favor, escolha sua cidade.",
-                didOpen: () => {
-                    document.querySelector('.swal2-html-container').innerHTML = 
-                        "Agora, <b style='font-size: 18px; color: red;'>selecione sua cidade:</b>";
-                }
-            });
+				title: "Estamos quase lá...",
+				text: "Agora, selecione sua cidade:",
+				input: "select",
+				inputOptions: quais_opt_de_cidade,
+				inputValue: quais_opt_de_cidade.indexOf(cidadeTemp),
+				confirmButtonText: "Procurar loja mais próxima!",
+				confirmButtonColor: "green",
+				allowOutsideClick: false,
+				allowEscapeKey: false,
+				inputValidator: value => value ? undefined : "Por favor, escolha sua cidade."
+			});
 
 			cidadeEscolhida = quais_opt_de_cidade[cidadeEscolhida];
 
@@ -6956,3 +6834,9 @@
 		escolherLocalizacao();
 	</script>
 	
+
+
+
+
+
+</body></html>
