@@ -1134,20 +1134,21 @@
 		
 		<script>
 			// Variável global para armazenar o produto selecionado
-let produtoSelecionado = '';
+let produtoSelecionadoGlobal = '';
 
 // Função para abrir o modal de acompanhamentos
 function abrirModalAcompanhamentos(produtoId) {
-    produtoSelecionado = produtoId;
+    produtoSelecionadoGlobal = produtoId;
     document.getElementById('modalOverlay').style.display = 'block';
     document.getElementById('modalAcompanhamentos').style.display = 'block';
+    document.getElementById('modalButtonsContainer').style.display = 'block';
 }
 
 function fecharModalAcompanhamentos() {
     document.getElementById('modalOverlay').style.display = 'none';
     document.getElementById('modalAcompanhamentos').style.display = 'none';
     document.getElementById('modalButtonsContainer').style.display = 'none';
-    produtoSelecionado = '';
+    produtoSelecionadoGlobal = '';
     
     // Desmarcar todos os checkboxes
     const checkboxes = document.querySelectorAll('#modalAcompanhamentos input[type="checkbox"]');
@@ -1171,7 +1172,7 @@ function confirmarAcompanhamentos() {
     }
     
     // Verificar se um produto foi selecionado
-    if (!produtoSelecionado || !produtos[produtoSelecionado]) {
+    if (!produtoSelecionadoGlobal || !produtos[produtoSelecionadoGlobal]) {
         Swal.fire({
             icon: 'error',
             title: 'Erro',
@@ -1181,7 +1182,7 @@ function confirmarAcompanhamentos() {
     }
     
     // Redirecionar para o link de pagamento
-    window.location.href = produtos[produtoSelecionado].link;
+    window.location.href = produtos[produtoSelecionadoGlobal].link;
 }
 
 // Mapeamento dos produtos e seus links de pagamento
@@ -1211,33 +1212,6 @@ const produtos = {
     "1-copo-acai-700ml-zero": { link: "https://go.disruptybr.com.br/mwn4m", valor: "26.90" },
     "1-copo-acai-1l-zero": { link: "https://go.disruptybr.com.br/k4la1", valor: "32.90" }
 };
-
-function abrirModalAcompanhamentos(produtoSelecionado) {
-    // Verificar se o produto existe
-    if (!produtos[produtoSelecionado]) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Erro',
-            text: 'Produto não encontrado!'
-        });
-        return;
-    }
-    
-    // Obter o produto selecionado
-    const produto = produtos[produtoSelecionado];
-    
-    // Mostrar loading e redirecionar
-    Swal.fire({
-        title: 'Redirecionando para pagamento...',
-        allowOutsideClick: false,
-        didOpen: () => {
-            Swal.showLoading();
-            setTimeout(() => {
-                window.location.href = produto.link;
-            }, 1000);
-        }
-    });
-}
 
 // Contador regressivo
 function startCountdown() {
