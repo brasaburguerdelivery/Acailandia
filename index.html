@@ -1016,6 +1016,7 @@
 <!-- Modal de Acompanhamentos -->
 <div id="modalOverlay"></div>
 <div id="modalAcompanhamentos" style="display: none;">
+    <button onclick="fecharModalAcompanhamentos()" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 20px; cursor: pointer;">×</button>
     <h3>Monte seu açaí perfeito</h3>    
     
     <div class="acompanhamentos-container">
@@ -1124,10 +1125,10 @@
         </div>
     </div>
     
-   <div id="modalButtonsContainer" style="display: none;">
-    <div class="modal-buttons-rectangle">
-        <button class="btn btn-cancelar" onclick="fecharModalAcompanhamentos()">Cancelar</button>
-        <button class="btn btn-confirmar" onclick="confirmarAcompanhamentos()">Confirmar</button>
+   <div id="modalButtonsContainer" style="display: block;">
+        <div class="modal-buttons-rectangle">
+            <button class="btn btn-cancelar" onclick="fecharModalAcompanhamentos()">Cancelar</button>
+            <button class="btn btn-confirmar" onclick="confirmarAcompanhamentos()">Confirmar</button>
     </div>
 </div>
 		
@@ -1140,7 +1141,6 @@ function abrirModalAcompanhamentos(produtoId) {
     produtoSelecionado = produtoId;
     document.getElementById('modalOverlay').style.display = 'block';
     document.getElementById('modalAcompanhamentos').style.display = 'block';
-    document.getElementById('modalButtonsContainer').style.display = 'block';
 }
 
 function fecharModalAcompanhamentos() {
