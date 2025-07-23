@@ -326,18 +326,18 @@
 
         /* Estilo para o container dos botões */
         #modalButtonsContainer {
-            position: fixed;
-            top: calc(50% + 40vh);
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 500px;
-            z-index: 1002;
-            background: white;
-            padding: 15px 20px;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
+			position: relative; /* Mude de fixed para relative */
+			width: 100%;
+			max-width: 100%;
+			z-index: 1;
+			background: white;
+			padding: 15px 20px;
+			border-radius: 0 0 10px 10px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+			transform: none; /* Remova o transform */
+			left: auto;
+			top: auto;
+}
 
 			.modal-buttons-rectangle {
 			display: flex;
@@ -1248,10 +1248,11 @@
         </div>
     </div>
     
-   <div id="modalButtonsContainer" style="display: block;">
+   <div id="modalButtonsContainer">
         <div class="modal-buttons-rectangle">
             <button class="btn btn-cancelar" onclick="fecharModalAcompanhamentos()">Cancelar</button>
             <button class="btn btn-confirmar" onclick="confirmarAcompanhamentos()">Confirmar</button>
+        </div>
     </div>
 </div>
 		
