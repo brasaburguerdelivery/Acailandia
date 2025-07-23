@@ -1266,6 +1266,29 @@ function abrirModalAcompanhamentos(produtoId) {
     document.getElementById('modalAcompanhamentos').style.display = 'block';
 }
 
+// Função para fechar o modal de acompanhamentos
+function fecharModalAcompanhamentos() {
+    document.getElementById('modalOverlay').style.display = 'none';
+    document.getElementById('modalAcompanhamentos').style.display = 'none';
+    document.getElementById('modalButtonsContainer').style.display = 'none';
+}
+
+// Fechar ao clicar no overlay
+document.getElementById('modalOverlay').addEventListener('click', fecharModalAcompanhamentos);
+
+// Função para fechar o modal de endereço
+function fecharModalEndereco() {
+    document.getElementById('modalEndereco').style.display = 'none';
+}
+
+// Função para voltar do modal de endereço para o de acompanhamentos
+function voltarParaAcompanhamentos() {
+    fecharModalEndereco();
+    document.getElementById('modalOverlay').style.display = 'block';
+    document.getElementById('modalAcompanhamentos').style.display = 'block';
+    document.getElementById('modalButtonsContainer').style.display = 'block';
+}
+
 // Fecha o modal e redireciona
 function confirmarAcompanhamentos() {
     document.getElementById('modalOverlay').style.display = 'none';
